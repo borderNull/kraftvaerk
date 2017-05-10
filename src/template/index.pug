@@ -1,0 +1,55 @@
+extends _layout
+
+block content
+   nav.navigation
+       .mobile
+           h5.mobile__title Navigation
+           .mobile-menu
+               .mobile-menu-block
+                 .mobile-menu-block-item
+                 .mobile-menu-block-item
+                 .mobile-menu-block-item
+               ul.mobile-menu-list
+                  li.mobile-menu-list-item
+                     a.mobile-menu-list-item__link psd websites
+                  li.mobile-menu-list-item
+                     a.mobile-menu-list-item__link ui kits
+                  li.mobile-menu-list-item
+                     a.mobile-menu-list-item__link premium psd files
+                  li.mobile-menu-list-item
+                     a.mobile-menu-list-item__link about
+                  li.mobile-menu-list-item
+                     a.mobile-menu-list-item__link blog           
+       .navigation-content
+           a.navigation__link(href="#") psd websites
+           a.navigation__link(href="#") ui kits
+           a.navigation__link(href="#") premium psd files
+           a.navigation__link(href="#") about  
+           a.navigation__link(href="#") blog 
+   section.promo
+       .promo-content
+           h1.promo__title Awesome Free PSD templates & Resources
+           a.promo__link(href="#") www.BlazRobar.com
+               +svgIcon('new-arrow')
+   section.presentation
+       .presentation-slogan
+           h3.presentation-slogan__title I'm like the Robin Hood of PSD files
+       .presentation-button
+           a.presentation__link(href="#")
+             +svgIcon('new-arrow')
+   section.gallery
+       .gallery-button
+           a.gallery__link(href="#")
+              +svgIcon('new-arrow')
+       img.gallery__img(src="./img/bridge-img-2.png")
+       img.gallery__img(src="./img/girl-img-2.png")
+   section.description
+      .description-content
+          h4.description__title BlazRobar.com
+          .description-content-wrapper
+             .description-content-item
+                p.description__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula ipsum non leo tristique eget facilisis lacus commodo. Curabitur vitae justo lorem, non ornare nibh. Pellentesque pretium, tellus ac ultrices faucibus, nibh mauris dapibus lorem, vitae viverra nisl elit sit amet libero. Nam eu blandit risus. 
+                p.description__text Phasellus imperdiet mattis nulla. Integer gravida imperdiet congue. Proin vitae pretium augue. Donec est sem, mattis et blandit ac, blandit at arcu. Donec tempus tincidunt suscipit. Suspendisse eu vulputate lacus.
+             .description-content-item
+                p.description__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula ipsum non leo tristique eget facilisis lacus commodo. Curabitur vitae justo lorem, non ornare nibh. Pellentesque pretium, tellus ac ultrices faucibus, nibh mauris dapibus lorem, vitae viverra nisl elit sit amet libero. Nam eu blandit risus. 
+                p.description__text Phasellus imperdiet mattis nulla. Integer gravida imperdiet congue. Proin vitae pretium augue. Donec est sem, mattis et blandit ac, blandit at arcu. Donec tempus tincidunt suscipit. Suspendisse eu vulputate lacus.         

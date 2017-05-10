@@ -1,0 +1,338 @@
+body
+  font-family Montserrat,Arial,sans-serif
+.navigation
+  background #373c3f
+  height 100px
+  +below(980px)
+     height 75px
+  +below(640px)
+     height 37px
+  .mobile
+    height 100%
+    box horizontal space-between middle
+    &__title
+      font-size 24px
+      color #fff
+      margin-left 35px
+      +below(640px)
+        margin-left 20px
+        font-size 14px
+    &-menu
+      width 80px
+      height 100%
+      background #202529
+      box horizontal center middle
+      &.active
+        position fixed
+        top 0
+        right 0
+        height 37px
+        z-index 999
+      &.active .mobile-menu-list
+            top 0
+            right 40px
+            opacity 1
+            transition opacity .25s   
+            animation menu-active-slide .25s
+            position fixed
+            z-index 999
+
+      +below(640px)
+        width 40px
+      &-block 
+        cursor pointer
+        &.active .mobile-menu-block-item
+          &:first-of-type
+             transform rotate(45deg)
+             position relative
+             top -3px
+          &:nth-of-type(2)
+             width 0%
+             opacity 0
+          &:last-of-type
+             transform rotate(-45deg)             
+      &-block-item
+        transition ease-in-out .3s
+        width 31px
+        height 4px
+        background #fff
+        margin-bottom 4px
+        &:first-of-type
+          transform-origin left center
+        &:nth-of-type(2)
+           transform-origin left center
+        &:last-of-type
+           transform-origin left center
+        +below(640px)
+           width 16px
+           height 2px
+           margin-bottom 2px
+        &:last-of-type
+          margin-bottom 0
+      
+      &-list
+        position absolute
+        right 40px
+        top 0
+        background #202529
+        color #fff
+        width 200px
+        height 300px
+        z-index 999
+        padding 20px
+        transition opacity .25s
+        opacity 0
+        +above(640px)
+          display none
+        &-item
+          margin-bottom 10px
+          &__link
+            text-transform uppercase
+            text-decoration none
+            color #fff
+
+    +above(640px) 
+      display none
+
+  &-content
+    box horizontal middle 
+    margin-left 50px
+    +below(641px)
+      display none
+  
+  &__link
+    color #fff
+    font-size 15px
+    text-transform uppercase
+    text-decoration none
+    height 100px
+    box horizontal middle center
+    margin-right 30px
+    &:last-of-type
+       margin-right 0
+    +below(980px)
+      height 75px   
+
+@keyframes menu-active-slide {
+  0% {
+    transform: translateX(10px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+.promo
+  background-color #373c3f
+  background-image url('../img/background-blue.png')
+  background-size 100%
+  min-height 580px
+  box horizontal middle
+  +below(1024px)
+    min-height 550px
+  +below(980px)
+    min-height 350px
+  +below(640px)
+    min-height 180px   
+
+
+
+  &-content
+     margin-left 80px
+     +below(980px) 
+       margin-left 50px
+     +below(640px)
+       margin-left 25px
+
+  &__title
+     font-size 60px
+     line-height 65px
+     color #fff
+     max-width 700px
+     margin-bottom 60px
+     +below(980px)
+       font-size 41px
+       line-height 46px
+       margin-bottom 25px
+     +below(640px)
+       font-size 22px
+       line-height 26px
+       margin-bottom 15px
+  
+  &__link
+     font-size 34px
+     color #a6d4dd
+     position relative
+     width 100%
+     display block
+     text-decoration none
+     transition all .5s
+     box horizontal space-between
+     +below(980px)
+       font-size 26px
+       max-width 80%
+     +below(640px)
+       font-size 12px   
+     &:hover 
+       color #fff
+       & .new-arrow
+         transform translateX(50%) 
+     .new-arrow
+         width 17px
+         height 27px
+         transition all .5s
+         +below(980px)
+           width 12px
+           height 17px
+         +below(640px)
+           width 8px
+           height 10px
+       
+    
+
+
+
+.presentation
+    min-height 245px
+    box horizontal
+    +below(1024px)
+       min-height 235px
+    +below(980px)
+       min-height 150px
+    +below(640px)
+       min-height 75px
+
+    &-slogan
+       background-color #27212c
+       box horizontal center middle
+       width 75%
+       font-size 30px
+       color #867793
+       +below(980px)
+         font-size 18px
+       +below(640px)
+         font-size 12px
+
+    
+    &-button
+       background-color #bc3183
+       width 25%
+       position relative
+   
+    &__link
+      position absolute 
+      width 100%
+      height 100% 
+      box horizontal center middle
+      &:hover .new-arrow
+         transform translateX(50%)
+      .new-arrow
+          width 26px
+          height 40px
+          transition all .5s
+          +below(980px)
+            width 16px
+            height 25px
+          +below(640px)
+             width 10px
+             height 14px
+
+  
+
+.gallery 
+   box horizontal
+   height 294px
+   +above(1280px)
+     height 40vh
+   +below(1024px)
+      height 284px
+   +below(980px)
+      box vertical 
+      height 100%
+      
+
+   &-button
+     width 33.333%
+     background #5b0fa1
+     position relative
+     +below(980px)
+       width 100%
+       height 550px
+     +below(440px)
+       height 275px
+
+   &__link 
+     width 100%
+     height 100%
+     position absolute
+     box horizontal center middle
+     &:hover .new-arrow
+         transform translateX(50%)
+    .new-arrow
+      width 20px
+      height 31px
+      transition all .5s
+
+   &__img 
+     width 33.333%
+     +below(980px)
+       width 100%
+       max-height 550px
+
+.description
+   background #ebebeb
+   height 560px
+   +below(980px)
+     height 100%
+     background #fff
+   
+  
+   &__title
+     font-size 30px
+     color #088ca5
+     margin-top 55px
+     margin-bottom 30px
+     +below(640px)
+       font-size 22px
+
+   &-content
+     max-width 870px
+     margin 0 auto
+     +below(1024px)
+       max-width 820px
+     +below(980px)
+       max-width 500px
+     +below(640px)
+       max-width 250px   
+
+
+   &-content-wrapper
+      box horizontal
+      +below(980px)
+        box vertical
+
+   &-content-item
+     &:first-of-type
+       margin-right 70px
+       +below(980px)
+         display none
+
+   &__text
+     max-width 400px
+     font-size 14px
+     line-height 26px
+     +below(980px)
+       max-width 100%
+       font-size 22px
+       line-height 44px
+     +below(640px)
+       font-size 14px
+       line-height 18px   
+     &:nth-of-type(odd) 
+       margin-bottom 20px
+       +below(980px)
+         margin-bottom 40px
+       +below(640px)
+        margin-bottom 30px
+
+
